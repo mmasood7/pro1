@@ -1,0 +1,511 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;;
+    
+}
+.fhalf{
+    width: 100%;
+    height: 100vh;
+    background-color: #29293a;
+    overflow: hidden;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+.top button{
+    width: 40%;
+
+}
+
+.thhalf{
+    width: 100%;
+    height: 120vh;
+    /* background-color: gray; */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.frhalf{
+    width: 100%;
+    height: 40vh;
+    background-image: linear-gradient(to right, #6d0eb1 20%, #ed1c94);
+    overflow: hidden;
+}
+.fihalf{
+    width: 100%;
+    height: 40vh;
+    background-color: white; 
+    overflow: hidden;
+}
+
+
+.ehalf{
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(228, 228, 228); 
+    overflow: hidden;
+}
+.nhalf{
+    width: 100%;
+    height: 40vh;
+    background-color: white; 
+}
+.thalf{
+    width: 100%;
+    height: 20vh;
+    background-color: purple; 
+}
+.elhalf{
+    width: 100%;
+    height: 80vh;
+    background-color: darkblue; 
+}
+.fhalf .top{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    bottom:0;
+    margin:auto;
+    overflow: hidden;
+}
+.fhalf{
+    position: relative;
+}
+.fhalf .f1{
+    width: fit-content;
+    margin: 20px;
+}
+.fhalf h1{
+    width: 10%;
+    font-size: 54px;
+    text-align: center;
+    margin: auto;
+    /* font-weight: li; */
+}
+.fhalf p{
+    font-size: 20px;
+    width: 80%;
+    margin: auto;
+}
+.fhalf .top button{
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    background-color: #ed1c94;
+   color: white;
+   font-size: 16px;
+   text-transform: uppercase;
+   text-align: center;
+   vertical-align: center;
+   transition: background 0.3s 0.01s, border-color 0.3s 0.01s;
+}
+.fhalf .top button:hover{
+    
+    background: #961fea;
+}
+.shalf h1{
+width: fit-content;
+margin:auto;
+margin-top: 40px;
+position: relative;
+    overflow: hidden;
+}
+.shalf h1::after{
+    content: "";
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #ed1c94 50%, #981df0 120%);
+    position: absolute;
+    left: 19px;
+    bottom:-10px;
+}
+.shalf .card{
+    display: inline-flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    vertical-align: middle;
+}
+.shalf .card img{
+    width: 130px;
+    padding-bottom: 20px;
+    vertical-align: middle;
+    
+}
+.shalf .card p{
+    width: 60%;
+    text-align: center;
+    padding-top: 20px;
+}
+.shalf .cardtop{
+    display: flex;
+
+}
+.shalf{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+.card h3{
+    position: relative;
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+}
+
+.pic{
+    display:inline-block;
+    margin: 0;
+    padding: 0;
+}
+.thhalf .pic:first-child{
+    background-image: url(../img/beans.JPG);
+flex-grow: 3;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.pic:nth-child(2){
+    background-image: url(../img/pic2.JPG);
+   flex-grow: 1;
+    background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.pic1:nth-child(1){
+    background-image: url(../img/pic3.JPG);
+    
+   flex-grow: 1;
+    background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.pic1:nth-child(2){
+    background-image: url(../img/pic4.JPG);
+    flex-grow: 3;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}   
+.frhalf{
+color: white;
+    position: relative;
+    overflow: hidden;
+}
+.frhalf .center{
+    width: 700px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    bottom: 30px;
+    right: 0;
+    height: fit-content;
+   
+}
+.frhalf .center{
+display: flex;
+}
+.btn{
+    width: fit-content;
+    position: relative;
+    left: 50px;
+}
+.div1{
+    display: flex;
+}
+.div1 .pic:first-child{
+    width: 600px;
+    height: 400px;
+}
+.div1 .pic:nth-child(2){
+    width: 410px;
+    height: 400px;
+}
+.div2 .pic1:nth-child(1){
+    width: 410px;
+    height: 400px;
+}
+.div2 .pic1:nth-child(2){
+    width: 600px;
+    height: 400px;
+}
+.div2{
+    display: flex;
+}
+.btn button{
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid white;
+    background-color: transparent;
+   color: white;
+   font-size: 12px;
+   text-transform: uppercase;
+   text-align: center;
+   transition: background 0.3s 0.01s, border-color 0.3s 0.01s;
+}
+.btn button:hover{
+    background: #961fea;
+    border: none;
+}
+.fihalf h1{
+font-weight: lighter;
+width: fit-content;
+margin: auto;
+;
+}
+.fihalf{
+    position: relative;
+    overflow: hidden;
+}
+.fihalf .center{
+    width: fit-content;
+    margin: auto;
+}
+.fihalf button{
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    margin: 20px;
+    padding: 1px;
+    text-transform: uppercase;
+    background-color: #e74ca4;
+    color: white;
+    transition: background 0.3s 0.01s, border-color 0.3s 0.01s;
+    
+}
+.fihalf button:hover{
+background: #961fea;
+    border: none;
+}
+.center{
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   width: fit-content;
+   height: fit-content;
+   margin: auto;
+}
+.sihalf .card{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid   red; */
+    width: 200px;
+    padding: 0;
+    margin: 0;
+
+}
+.sihalf .card .top{
+    background-color: #e74ca4;
+    align-self: stretch;
+    justify-self:stretch;
+    margin: 0;
+    padding: 20px 50px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.sihalf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 25px;
+overflow: hidden;
+}
+.sihalf .card:hover .top{
+    background: #961fea;
+    border: none;
+}
+.sihalf .center1{
+    height: 200px;
+    width: 100%;
+   /* padding: 100px ; */
+   /* border: 2px solid red; */
+   box-sizing: border-box;
+   text-align: center;
+   padding-top: 30px;
+}
+.sihalf .center1 h1{
+    position: relative;
+    top: 40px;
+}
+.center1 h1::after{
+    content: "";
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #ed1c94 50%, #981df0 120%);
+    position: absolute;
+    left:620px;
+    bottom:-20px;
+
+}
+.cards{
+    display: flex;
+    box-sizing: border-box;
+    height: fit-content;
+}
+.sihalf .cards .card{
+height: fit-content;
+width: 250px;
+margin: 20px 50px;
+background-color: #ffffff;
+border-radius: 10px;
+}
+.sihalf{
+    width: 100%;
+    height: 120vh;
+    background-color: rgb(228, 228, 228);
+    border: none;
+    border-radius: 0;
+}
+.price{
+    width: 100px;
+    margin: auto;
+    margin:20px auto;
+    font-size: 36px;
+}
+.sihalf .cards .card img{
+    vertical-align: middle;
+    margin: 7px 10px;
+}
+.tagstop{
+   display: inline-block;
+   
+}
+.cards .card button{
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    margin: 5px auto;
+    padding: 1px;
+    text-transform: uppercase;
+    background-color: #e74ca4;
+    color: white;
+    transition: background 0.3s 0.01s, border-color 0.3s 0.01s;
+    position: relative;
+}
+.cards .card .price{
+    text-align: center;
+    font-size: 36px;
+
+}
+.cards .card .price span{
+   font-size: 15px;
+   position: relative;
+   bottom: 15px;
+}
+.cards .card button:hover{
+    background: #961fea;
+    border: none;
+}
+.tagtop .tags img{
+margin: 20px;
+}
+.sehalf > img{
+    height: 160vh;
+    width: 35%;
+}
+.sehalf{
+    display: flex;
+    width: 100%;
+    height: 160vh;
+    background-color: #29293a;
+    box-sizing: border-box;
+    overflow: hidden;    
+    color: white;
+}
+flex10{
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+.gird{
+    margin-left: 50px;
+}
+.flex10 .flex1{
+    width: 100%;
+    height: 40px;
+    margin: 50px;
+}
+.gird .card2 img{
+
+margin: 10px;
+vertical-align: text-top;
+margin-left: -1px;
+border-radius: 15px;
+border: none;
+padding: 2px;
+}
+.gird .card2{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: fit-content;
+    border: .5px solid white;
+    padding: 30px 30px 100px 30px ;
+    color: white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    transition: background 0.3s 0.01s, border-color 0.3s 0.01s;
+}
+.gird{
+    display: grid;
+    grid:400px 400px / 300px 400px;
+    column-gap: 20px;
+    row-gap: 20px;
+    
+}
+.card2 p{
+margin: 20px 0;
+border-top: 1px solid white;
+padding: 25px 0;
+}
+.card2:hover{
+    background-color: #a64ce7c4;
+    border: none;
+}
+.fihalf .top h1{
+ color: black ;
+}
+.this{
+    background-color: rgb(231, 231, 231);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.this h1{
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+.this h1::after{
+    content: "";
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #ed1c94 50%, #981df0 120%);
+    position: absolute;
+    left:100px;
+    bottom:0px;
+    
+}

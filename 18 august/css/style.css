@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
+}
+@keyframes list {
+    0%{
+        top:80px;
+        opacity: 0%;
+    }
+    50%{
+        top:64px;
+        opacity: 100%;
+    }
+    190%{
+        top:64px;
+        opacity: 100%;
+    }
+  
+}
+@keyframes alist {
+    0%{ display: list-item;
+        top:64px;
+        opacity: 100%;
+    }
+    100%{
+        top:80px;
+        opacity: 0%;
+        display: none;
+    }
+}
+
+header{
+    width: 100%;
+    height: fit-content;
+}
+.tbar{
+    width: 100%;
+    height: 3vw;
+    background-color: #151515;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right{
+    margin-right: 20px;
+}
+.right img{
+    width: 15px;
+    filter: invert(100%);
+}
+.left{
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+.left img{
+    vertical-align: middle;
+    margin: 0 10px;
+}
+.logobar img{
+    width: 200px;
+
+}
+.logobar{
+    width: 100%;
+    height: fit-content;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+}
+.logobar span{
+    position: absolute;
+    top: 60%;
+    left: 49%;
+    color: rgb(34, 34, 34);
+}
+
+.navbar .list ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 10px;
+    /* font-size: 13px; */
+    }
+.navbar .list ul li a{
+    color: black;
+    text-decoration: none;
+    /* font-size: 13px; */
+}
+.navbar .list ul li div{
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 3px;
+
+}
+.btn button{
+    width: 150px;
+    height:40px;
+    border-radius: 25px;
+    border: none;
+    position: relative;
+    right: 20px;
+    background-color: #ffa800;
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.btn button:hover{
+    transition: .25s;
+    background-color: #2c20c2;
+    
+
+}
+.navbar .list > ul li a:hover,.navbar .list > ul  li:hover{
+   color: #ffa800;
+}
+.navbar .list ul li:hover div{
+    border-color:#ffa800 ;
+}
+.navbar .list ul li:first-child a{
+    color: #ffa800;
+}
+.content{
+    width: 100%;
+    height: 60vw;
+    background: url(../img/sean-oulashin-KMn4VEeEPR8-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 100%;
+    height: fit-content;
+    padding:13px 20px;
+    display: flex;
+    justify-content:space-between;
+    box-sizing: border-box;
+    background-color: white;
+    text-transform: uppercase;
+    align-items: center;
+    position:sticky;
+    top: 0;
+    z-index: 50;
+}
+.hover{
+    display: none;
+}
+.hover{
+    display: none;
+    position: absolute;
+    width: 33%;
+    height: fit-content;
+    background-color: white;
+    border:none;
+    border-radius: 5px;
+   
+}
+.navbar ul li:nth-child(6) +li:nth-child(5) ul li{
+    padding: 20px 20px;
+    color: black;
+}
+.navbar ul li:nth-child(6):hover + li ul{
+    display: list-item;
+    list-style: none;
+    animation: list .3s linear 0s;
+   top:64px;
+   
+   
+}
+.navbar ul li:nth-child(5) .hover:nth-child(2){
+    width: 15%;
+    color: black;
+}
+.navbar ul li:nth-child(5):hover ul{
+    display: list-item;
+    list-style: none;
+    animation: list .5s ease-in-out 0s;
+    top:64px;
+}
+.hover li{
+    border-bottom: 1px solid rgb(240, 240, 240);
+    
+}
+.hover:hover::after{
+    animation: alist .5s linear 0s;
+}
+.navbar ul li:nth-child(6) ul{
+    
+    top:80px;
+    opacity: 0%;
+    transition:top 4s linear 0s,opacity 2s linear 4s ;
+    
+}
+
+
+.mas #u{
+    top: 80px;
+    opacity: 0%;
+    transition: top 3s linear 0s;
+}
+.mas:hover #u{
+    display: grid;
+    top: 60px;
+    opacity: 100%;
+}
+
+
+
+.content form{
+    width: 500px;
+    height: 600px;
+    background-color:white;
+    float: right;
+    position: relative;
+    top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 566px;
+    background-color: rgba(247, 247, 247, 0.9);
+}
+.content form label{
+    display: block;
+}
+.field{
+    width: 500px;
+    height: 40px;
+    border-radius: 25px;
+}
+.field select{
+    text-align: center;
+}
+.content ul li{
+    margin: 10px;
+}
