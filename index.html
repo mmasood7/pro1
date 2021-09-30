@@ -5,9 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table:first-child {
+        border: 2px solid black;
+        border-radius: 25px;
+        width: 160px;
+        height: 160px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: relative;
+        /* margin: auto; */
+        user-select: none;
+        padding: 20px;
+      }
+      div {
+        width: 660px;
+        height: 660px;
+        /* border: 2px solid black; */
+      }
+      table:last-child td {
+        width: 20px;
+        height: 20px;
+      }
+      .dot {
+        border-radius: 50px;
+        background-color: black;
+      }
+    </style>
   </head>
   <body>
-      <h3>statoins</h3>
+    <div>
+      <table onclick="rollDice()">
+        <tr>
+          <td id="no1"></td>
+          <td id="no2"></td>
+          <td id="no3"></td>
+        </tr>
+        <tr>
+          <td id="no4"></td>
+          <td id="no5"></td>
+          <td id="no6"></td>
+        </tr>
+        <tr>
+          <td id="no7"></td>
+          <td id="no8"></td>
+          <td id="no9"></td>
+        </tr>
+      </table>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

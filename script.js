@@ -1,63 +1,51 @@
 "use strict";
-const trainProject = {
-  stations: [
-    "Karachi Cantt",
-    "Landhi",
-    "Hyderabad",
-    "Tando Adam",
-    "Padidan",
-    "Rohri",
-    "Ghotki",
-    "Sadikabad",
-    "Rahim Yar Khan",
-    "Khanpur",
-    "Bahawalpur",
-    "Multan Cantt",
-    "Khanewal",
-    "Abdul Hakim",
-    "Shorkot Cantt",
-    "Toba Tek Singh",
-    "Gojra",
-    "Faisalabad",
-    "Sangla Hill",
-    "Sukheke",
-    "Hafizabad",
-    "Alipur Chattha",
-    "Wazirabad",
-    "Gujrat",
-    "Lala Musa",
-    "Jhelum",
-    "Dina",
-    "Gujar Khan",
-    "Chak Lala",
-    "Rawalpindi",
-  ],
-  checkPoint: "Faisalabad",
-  pickUp: "",
-  destination: "",
-  location: function (to) {
-    if (trainProject.stations.includes(to)) {
-      const location =
-        trainProject.stations.indexOf(to) > 18 ? "after" : "before";
-      console.log(location);
-      return location;
-    } else {
-      console.log("enter a valid location");
+const a = 5;
+const arr = [
+  [a],
+  [a + 1, a - 1],
+  [a, a + 4, a - 4],
+  [a - 2, a - 4, a + 2, a + 4],
+  [a, a - 2, a + 2, a - 4, a + 4],
+  [a - 1, a - 2, a - 4, a + 1, a + 2, a + 4],
+];
+const rollDice = function () {
+  const allTd = document.querySelectorAll("td");
+  allTd.forEach((item) => item.classList.remove("dot"));
+  const randomNum = function () {
+    return Math.floor(Math.random() * 6);
+  };
+  const randomPostition = function () {
+    return Math.floor(Math.random() * 90);
+  };
+  let num = randomNum();
+  console.log(num);
+  arr.forEach((item, i) => {
+    if (num === 6) {
+      document.querySelector("table").style.backgroundColor = "green";
     }
-  },
-  caragies: [
-    72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72, 72,
-  ],
-  carNotReservedAfter : function(){
-    for(i=0; i < 12; i++)
-    this.caragies[i] < 72 ? return [this.caragies[i]] ;
-
-  } 
+    if (num === i) {
+      item.forEach((item) => {
+        document.querySelector("table").style.transition = `2s`;
+        document.getElementById(`no${item}`).classList.add("dot");
+        // document.querySelector(".dot").style.backgroundColor = `#${
+        //   Math.floor(Math.random() * 600) + 50
+        // }`;
+      });
+      document.querySelector(
+        "table"
+      ).style.transform = `rotate(${randomPostition()}deg)`;
+      document.querySelector("table").style.boxShadow = `${
+        Math.floor(Math.random() * 3) + 5
+      }px ${Math.floor(Math.random() * 15) + 10}px`;
+    }
+  });
+  const pos = ["top", "bottom", "right", "left"];
+  const a = pos[Math.floor(Math.random() * 4)];
+  document.querySelector("table").style.top = `${
+    Math.floor(Math.random() * 200) + 50
+  }px`;
+  document.querySelector("table").style.left = `${
+    Math.floor(Math.random() * 600) + 50
+  }px`;
 };
-trainProject.pickUp = prompt("enter your pick up point");
-trainProject.destination = prompt("enter your destination point");
-const location = trainProject.location(trainProject.destination);
-
-if (location === "after") {
-  caragies.
-}
+// document.getElementById("table").addEventListener("click", rollDice);
