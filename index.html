@@ -5,113 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      form {
-        width: fit-content;
-        text-align: center;
-        margin: auto;
-      }
-      label {
-        display: block;
-        margin: 10px 0;
-      }
-      input {
-        display: block;
-      }
-      button {
-        margin: 10px 0;
-      }
-      table {
-        border: 2px solid black;
-        width: fit-content;
-        margin: auto;
-        text-align: center;
-      }
-
-      td {
-        width: 300px;
-        border: 1px solid black;
-      }
-      thead td {
-        background-color: black;
-        color: white;
-        font-weight: bold;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
-      <form id="myForm">
-        <fieldset>
-          <legend>Personal Information Form</legend>
-          <label for="userName">Your Name</label>
-          <input type="text" placeholder="Profile Name" name="" id="userName" />
-          <label for="userEmail">Your Email</label>
-          <input
-            type="email"
-            placeholder="Email@somthing.com"
-            name=""
-            id="userEmail"
-          />
-          <label for="userPass">Your PassWord</label>
-          <input type="text" name="" placeholder="**********" id="userPass" />
-          <button>Submit</button>
-        </fieldset>
-      </form>
-      <table id="myTable"></table>
-    </div>
-    <script>
-      let users = [];
-      const userNameEl = document.querySelector("#userName");
-      const userEmailEl = document.querySelector("#userEmail");
-      const userPassEl = document.querySelector("#userPass");
-      const form = document.querySelector("#myForm");
-      const table = document.querySelector("#myTable");
-      const emptyTable = function () {
-        table.innerHTML = "";
-        const hRow = document.createElement("thead");
-        const colName = document.createElement("td");
-        colName.textContent = "User's Name";
-        const colEmail = document.createElement("td");
-        colEmail.textContent = "User's Email";
-        const colPass = document.createElement("td");
-        colPass.textContent = "User's Password";
-        hRow.append(colName, colEmail, colPass);
-        table.append(hRow);
-      };
-
-      const diplayUser = function () {
-        emptyTable();
-        users.forEach((user) => {
-          const row = document.createElement("tr");
-          const nameCol = document.createElement("td");
-          nameCol.textContent = user.userName;
-          const emailCol = document.createElement("td");
-          emailCol.textContent = user.userEmail;
-          const passCol = document.createElement("td");
-          passCol.textContent = "*".repeat(user.userPass.length);
-          row.append(nameCol, emailCol, passCol);
-          table.append(row);
-        });
-      };
-      function addUser(a) {
-        a.preventDefault();
-        if (userNameEl.value && userEmailEl.value && userPassEl.value) {
-          const obj = {
-            userName: userNameEl.value,
-            userEmail: userEmailEl.value,
-            userPass: userPassEl.value,
-          };
-          console.log(obj);
-          users.push(obj);
-          console.log(users);
-        }
-      }
-      form.addEventListener("submit", (a) => {
-        addUser(a);
-        diplayUser();
-        form.reset();
-      });
-    </script>
+    <form id="myForm">
+      <fieldset>
+        <legend>My Form for Student Login</legend>
+        <label for="userName">UserName:</label>
+        <input type="text" id="userName" />
+        <label for="userEmail">UserEmail:</label>
+        <input type="email" id="userEmail" />
+        <label for="userPass">UserPassword:</label>
+        <input type="password" id="userPass" />
+        <button id="submitData">Enter Data</button>
+      </fieldset>
+    </form>
+    <script src="./script.js"></script>
   </body>
 </html>

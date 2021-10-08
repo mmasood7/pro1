@@ -1,0 +1,14 @@
+label,
+input,
+button {
+  display: block;
+  margin: 10px;
+}
+button {
+  padding: 10px;
+  margin: 10px auto;
+}
+form {
+  width: fit-content;
+  margin: auto;
+}
