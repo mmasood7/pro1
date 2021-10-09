@@ -9,6 +9,28 @@ const userNameEl = document.querySelector("#userName");
 const userEmailEl = document.querySelector("#userEmail");
 const userPassEl = document.querySelector("#userPass");
 const subForm = document.querySelector("#myForm");
+let stExists = false;
+const exist = function (st) {
+  students.find((student) => {
+    if (student.email.toLowerCase().trim() === st.toLowerCase().trim()) {
+      stExists = true;
+    }
+  });
+};
+const displayData = function () {
+  myTable.innerHTML = "";
+  students.forEach((student) => {
+    const tr = document.createElement("tr");
+    const tName = document.createElement("td");
+    tName.innerText = student.name;
+    const tEmail = document.createElement("td");
+    tEmail.innerText = student.email;
+    const tPass = document.createElement("td");
+    tPass.innerText = "*".repeat(student.password.length);
+    tr.append(tName, tEmail, tPass);
+    myTable.append(tr);
+  });
+};
 
 const createNewStudentRecord = function (e) {
   e.preventDefault();
@@ -18,20 +40,18 @@ const createNewStudentRecord = function (e) {
     s1.email = userEmailEl.value;
     s1.password = userPassEl.value;
     if (students.length !== 0) {
-      students.find((student) => {
-        if (
-          student.name.toLowerCase.trim === userNameEl.value.toLowerCase.trim
-        ) {
-          students.push(s1);
-        } else {
-          alert(`${s1.name} User Already Existes`);
-          return;
-        }
-      });
+      exist(userEmailEl.value);
+      if (stExists) {
+        alert("email is already in use");
+        stExists = false;
+      } else {
+        students.push(s1);
+      }
     } else {
       students.push(s1);
     }
   }
+  displayData();
 };
 subForm.addEventListener("submit", (event) => {
   createNewStudentRecord(event);

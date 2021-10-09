@@ -12,3 +12,15 @@ form {
   width: fit-content;
   margin: auto;
 }
+table {
+  width: fit-content;
+  margin: 20px auto;
+}
+thead {
+  background-color: black;
+  color: white;
+}
+th,
+td {
+  width: 250px;
+}
