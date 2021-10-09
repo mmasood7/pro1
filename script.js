@@ -9,11 +9,11 @@ const userNameEl = document.querySelector("#userName");
 const userEmailEl = document.querySelector("#userEmail");
 const userPassEl = document.querySelector("#userPass");
 const subForm = document.querySelector("#myForm");
-let stExists = false;
+// let stExists = false;
 const exist = function (st) {
-  students.find((student) => {
+return   students.find((student) => {
     if (student.email.toLowerCase().trim() === st.toLowerCase().trim()) {
-      stExists = true;
+     return true;
     }
   });
 };
@@ -39,17 +39,14 @@ const createNewStudentRecord = function (e) {
     s1.name = userNameEl.value;
     s1.email = userEmailEl.value;
     s1.password = userPassEl.value;
-    if (students.length !== 0) {
-      exist(userEmailEl.value);
+    let stExists = exist(s1.email);
       if (stExists) {
         alert("email is already in use");
         stExists = false;
       } else {
         students.push(s1);
       }
-    } else {
-      students.push(s1);
-    }
+  
   }
   displayData();
 };
