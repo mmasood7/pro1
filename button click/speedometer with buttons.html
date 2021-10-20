@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #needle {
+        width: 9px;
+        height: 110px;
+        background: #999999;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
+        display: inline-block;
+        left: 158px;
+        position: absolute;
+        top: 49px;
+        transform-origin: bottom;
+        transform: rotate(0deg);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./speed.jpg " alt="" />
+    <div id="needle"></div>
+    <button id="left">Left</button>
+    <button id="btn">Right</button>
+    <script>
+      const needle = document.getElementById("needle");
+      const down = document.getElementById("btn");
+      let i = 0;
+      const up = document.getElementById("btn");
+      let intervalD = false;
+      let pressed = false;
+      down.addEventListener("mousedown", (evt) => {
+        intervalD = false;
+        pressed = true;
+        const interval = setInterval(() => {
+          if (i >= 90 || intervalD) {
+            clearInterval(interval);
+          } else {
+            i++;
+            needle.style.transform = `rotate(${i}deg)`;
+            console.log(i);
+          }
+        }, 10);
+      });
+      up.addEventListener("mouseup", (evt) => {
+        setTimeout(() => {
+          pressed = false;
+          const intervalBack = setInterval(() => {
+            if (i <= 0) {
+              clearInterval(intervalBack);
+            } else {
+              i--;
+              needle.style.transform = `rotate(${i}deg)`;
+            }
+            intervalD = true;
+          }, 10);
+          console.log("hogya");
+        }, 100);
+      });
+      //   for left side code
+      const downL = document.getElementById("left");
+
+      const upL = document.getElementById("left");
+      let intervalL = false;
+      downL.addEventListener("mousedown", (evt) => {
+        intervalL = false;
+        const interval = setInterval(() => {
+          if (i <= -90 || intervalL) {
+            clearInterval(interval);
+          } else {
+            i--;
+            console.log(i);
+            needle.style.transform = `rotate(${i}deg)`;
+          }
+        }, 10);
+      });
+      upL.addEventListener("mouseup", (evt) => {
+        setTimeout(() => {
+          intervalL = true;
+          const intervalBack = setInterval(() => {
+            if (i >= 0) {
+              clearInterval(intervalBack);
+            } else {
+              i++;
+              needle.style.transform = `rotate(${i}deg)`;
+            }
+          }, 10);
+          console.log("hogya");
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
